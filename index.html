@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI</title>
+   <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+   <input type="text" id="display">
+   <button class="button" onclick="password1()">Generate Password</button>
+</body>
+</html>
+
+   <script>
+
+function password1() {
+    let displayField = document.getElementById('display'); 
+    let char = "ABCDEFGHIJKLMNOAPQRSTUWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+    let password = ''; 
+
+    for (let i = 0; i < 12; i++) {
+        password += char.charAt(Math.floor(Math.random() * char.length));
+    }
+    
+    displayField.value = password; 
+    return password;
+}
+
+</script>
+</body>
+</html>
